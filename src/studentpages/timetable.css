@@ -1,0 +1,57 @@
+
+.timetable-container{
+    background:#f6f8ff;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;      
+    justify-content:center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.timetable-container h1{
+    color:#5b7cfa;
+    margin-bottom:25px;
+}
+
+
+.form-box{
+    background:white;
+    padding:35px 45px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:600;
+}
+
+
+select{
+    width:260px;
+    padding:10px;
+    border-radius:6px;
+    border:2px solid #5b7cfa;
+}
+
+
+button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:6px;
+    background:#5b7cfa;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4766e6;
+}
