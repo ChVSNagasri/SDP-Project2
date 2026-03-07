@@ -4,7 +4,7 @@ import "./manageevents.css";
 
 export default function ManageEvents() {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const initialEvents = [
     { id: 1, name: "Samyuk", date: "2026-03-20", location: "Auditorium" },
