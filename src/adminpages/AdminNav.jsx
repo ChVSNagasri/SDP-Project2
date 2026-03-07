@@ -25,7 +25,7 @@ export default function AdminNav()
             <Route index element={<AdminHome/>}/>
             <Route path="addstudents" element={<AddStudent/>}/>
             <Route path="addfaculty" element={<AddFaculty/>}/>
-            <Route path="manageevents" element={<ManageEvents/>}/>
+            <Route path="manageevents" element={<ManageEvents/>}/>          
              <Route path="*" element={<Notfound/>}/>
         </Routes>
 
