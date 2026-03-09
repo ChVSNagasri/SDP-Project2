@@ -32,8 +32,30 @@ button{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
 }
 
 .event-card h3{
+  
     color: #5b7cfa;
+}
+
+.add-event-wrapper{
+display: flex;
+justify-content: center;
+margin-top: 40px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-card{
+width: 350px;
+text-align: center;
+}
+.event-card{
+box-shadow: 0 4px 15px rgba(18, 5, 248, 0.1);
+}
+
+.event-card:hover{
+transform: translateY(-5px);
+ 
 }

@@ -18,7 +18,7 @@ export default function AdminNav()
               <button><Link to="/naver/addstudents">🎓Add Student's</Link></button>
               <button><Link to="/naver/addfaculty">👩‍🏫Add Faculty's</Link></button>
               <button><Link to="/naver/manageevents">📅Events</Link></button>
-              <button onClick={() => navigate("/")}>Logout</button>
+              <button onClick={() => navigate("/")}>🔒Logout</button>
         </nav>
 
         <Routes>

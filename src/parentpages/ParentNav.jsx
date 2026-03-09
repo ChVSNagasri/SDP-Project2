@@ -19,7 +19,7 @@ export default function ParentNav()
         <button><Link to="/navs/attendance">📊Attendance</Link></button>
         <button><Link to="/navs/grade">🎓Children Grade</Link></button>
         <button><Link to="/navs/hostle">🏢Hostle</Link></button>
-        <button onClick={()=>navigate("/")}>Logout</button>
+        <button onClick={()=>navigate("/")}>🔒Logout</button>
       </nav>
 
       <div className="main-content">
