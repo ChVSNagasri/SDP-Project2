@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from 'react'
-export default function Demo1() 
+import axios from 'axios'
+export default function Awarders() 
 { 
     const[data,setData]=useState([])
     const [error,setError]=useState("")
- useEffect(() => { 
-    fetch("https://jsonplaceholder.typicode.com/users").then((response)=>
-       response.json()
-    ).then((data) => 
-        setData(data)
-    ).catch((err) => {
-        setError(err.message)
-    });
- }, []); 
+const displayData=async ()=>{
+        try
+        {
+          
+       const response=await axios.get("https://jsonplaceholder.typicode.com/users") 
+           setData(response.data)
+        } 
+        
+        catch (error) 
+        {
+           setError(error.message) 
+        }
+    }
+
+    useEffect(() => {
+        displayData()
+    }, []);
   return (
     <div>
     <h1>CTC Students</h1> 

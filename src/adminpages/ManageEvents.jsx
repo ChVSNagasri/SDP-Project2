@@ -56,25 +56,11 @@ export default function ManageEvents() {
 
       <h3>Add Event</h3>
 
-      <input
-        placeholder="Event Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+     <input placeholder="Event Name" value={name} onChange={(e) => setName(e.target.value)}/>
       <br/>
-
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-      />
+<input type="date" value={date} onChange={(e) => setDate(e.target.value)}/>
       <br/>
-
-      <input
-        placeholder="Location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
+<input placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)}/>
       <br/>
 
       <button onClick={addEvent}>Add Event</button>
