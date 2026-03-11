@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import AdminNav from './AdminNav'
 export default function Awarders() 
 { 
     const[data,setData]=useState([])
@@ -23,9 +22,7 @@ const displayData=async ()=>{
         displayData()
     }, []);
   return (
-    
     <div>
-        <AdminNav/>
     <h1>CTC Students</h1> 
     {
         error? <b>{error}</b>:
