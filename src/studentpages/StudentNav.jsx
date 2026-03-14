@@ -5,7 +5,7 @@ import HostelManagement from './HostelManagement'
 import Attendance from './Attendance'
 import Courses from './Courses'
 import Assignments from './Assignments'
-import CGPA from './CGPA'
+import Cgpa from './Cgpa'
 import Timetable from './Timetable'
 import './studentnav.css'
 import Notfound from '../Notfound'
@@ -36,7 +36,7 @@ export default function StudentNav()
             <Route path="course" element={<Courses/>}/>
             <Route path="hostle" element={<HostelManagement/>}/>
             <Route path="profile" element={<Profile/>}/>
-            <Route path="cgpa" element={<CGPA/>}/>
+            <Route path="cgpa" element={<Cgpa/>}/>
             <Route path="timetable" element={<Timetable/>}/>
             <Route path="*" element={<Notfound/>}/>
         </Routes>
