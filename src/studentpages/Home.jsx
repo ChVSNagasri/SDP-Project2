@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logins from "../images/Logins.jpg";
-import "./home.css";
+import "../home.css";
 
 export default function Home() {
 
