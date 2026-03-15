@@ -78,6 +78,7 @@ const handleSubmit=()=>{
           </div>
         <form >
             <select ref={roleRef} onClick={handleRoleChange}>
+                <option>Select Role</option>
                 <option >Student</option>
                 <option >Faculty</option>
                 <option >Parent</option>
