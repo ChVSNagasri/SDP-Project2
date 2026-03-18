@@ -1,7 +1,8 @@
 import "./login.css";
 import Logins from '../images/Logins.jpg'
-import { useRef } from "react";
+import { useRef,useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
  export default function Login() 
 {
     const navigate=useNavigate()
@@ -9,6 +10,14 @@ import { useNavigate } from "react-router-dom";
     const pwdRef=useRef(null)
     const roleRef=useRef(null) 
 
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [error, setError] = useState("");
+
+const handleCaptcha = (token) => {
+    setCaptchaToken(token);
+    setError("");
+  };
+  
     const handleRoleChange = () => {
   unameRef.current.value = ""
   pwdRef.current.value = ""
@@ -18,6 +27,13 @@ const handleSubmit=()=>{
      const uname=unameRef.current.value        
      const pwd=pwdRef.current.value
      const role=roleRef.current.value
+
+      if (!captchaToken) {
+      setError("Please complete the CAPTCHA");
+      return;
+    }
+
+
      if(role=="Student"){
       if(uname=="student" && pwd=="student" )
      {
@@ -88,6 +104,12 @@ const handleSubmit=()=>{
             <input type="text" placeholder='Enter UserName' ref={unameRef}/><br/>            
             <input type="password" placeholder='Enter Password' ref={pwdRef}/><br/>   
         </form>
+
+ <div className="recaptcha">
+          <ReCAPTCHA
+      sitekey="6LeTh44sAAAAAB_9sWvEef204YGvLSfvs2eUQgWG"
+      onChange={handleCaptcha}
+    /></div>
 
           <button className="loginBtn" type="button"  onClick={handleSubmit}>Login</button>
 
