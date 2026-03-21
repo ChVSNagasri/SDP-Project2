@@ -19,7 +19,7 @@ export default function FacultyNav()
 
     setTimeout(() => {
       navigate("/")
-    }, 1500)
+    }, 5000)
   }
 
   return (
