@@ -1,9 +1,8 @@
-/* Main container */
+
 .nav-container {
     display: flex;
 }
 
-/* Sidebar */
 .naver {
     position: fixed;
     left: 0;
@@ -17,16 +16,14 @@
     gap: 15px;
 }
 
-/* Buttons */
 .naver button {
     padding: 10px;
     border: none;
-    background-color: #5b7cfa; /* Match sidebar color */
+    background-color: #5b7cfa; 
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Links */
 .naver a {
     text-decoration: none;
     color: darkslateblue;
@@ -35,10 +32,9 @@
 
 /* Hover effect */
 .naver button:hover {
-    background-color: #3f5fc1; /* Slightly darker shade for hover */
+    background-color: #3f5fc1; 
 }
 
-/* Content area */
 .nav-container > div {
     margin-left: 240px;
     padding: 20px;
