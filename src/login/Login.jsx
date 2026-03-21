@@ -3,6 +3,9 @@ import Logins from '../images/Logins.jpg'
 import { useRef,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
  export default function Login() 
 {
     const navigate=useNavigate()
@@ -41,6 +44,7 @@ const handleSubmit=()=>{
        sessionStorage.setItem("role", role)
          alert("Login valid")
          navigate("/nav")
+         toast("Login Successfully");
      }else{
         alert("Invalid Please Enter Valid Credentials")
      }   
@@ -52,6 +56,7 @@ const handleSubmit=()=>{
        sessionStorage.setItem("role", role)
          alert("Login valid")
          navigate("/navers")
+          toast("Login Successfully");
      }else{
 
         alert("Invalid")
@@ -64,6 +69,7 @@ const handleSubmit=()=>{
         sessionStorage.setItem("role", role)
          alert("Login valid")
          navigate("/navs")
+          toast("Login Successfully");
      }else{
         alert("Invalid")
      }   
@@ -75,6 +81,7 @@ const handleSubmit=()=>{
           sessionStorage.setItem("role", role)
          alert("Login valid")
          navigate("/naver")
+          toast("Login Successfully");
      }else{
         alert("Invalid")
      }   
@@ -112,7 +119,7 @@ const handleSubmit=()=>{
     /></div>
 
           <button className="loginBtn" type="button"  onClick={handleSubmit}>Login</button>
-
+             <ToastContainer autoClose={5000} />
         </div>
       </div>
 
