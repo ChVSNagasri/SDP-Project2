@@ -25,65 +25,62 @@ const handleCaptcha = (token) => {
   unameRef.current.value = ""
   pwdRef.current.value = ""
 }
-const handleSubmit=()=>{
-   
-     const uname=unameRef.current.value        
-     const pwd=pwdRef.current.value
-     const role=roleRef.current.value
+const handleSubmit = () => {
+  const uname = unameRef.current.value;
+  const pwd = pwdRef.current.value;
+  const role = roleRef.current.value;
 
-      if (!captchaToken) {
-      setError("Please complete the CAPTCHA");
-      return;
+  if (role === "Select Role") {
+    toast.error("Please select a role");
+    return;
+  }
+
+  if (!captchaToken) {
+    toast.error("Please complete the CAPTCHA");
+    return;
+  }
+
+  if (role === "Student") {
+    if (uname === "student" && pwd === "student") {
+      sessionStorage.setItem("username", uname);
+      sessionStorage.setItem("role", role);
+      alert("Login valid");
+      navigate("/nav");
+    } else {
+      toast.error("Invalid Please Enter Valid Credentials");
     }
-
-
-     if(role=="Student"){
-      if(uname=="student" && pwd=="student" )
-     {
-       sessionStorage.setItem("username", uname)
-       sessionStorage.setItem("role", role)
-         toast("Login Successfully");
-         navigate("/nav")
-         
-     }else{
-        toast("Invalid credentials");
-     }   
-     }
-     else if(role=="Faculty"){
-        if(uname=="faculty" && pwd=="faculty" )
-     {
-       sessionStorage.setItem("username", uname)
-       sessionStorage.setItem("role", role)
-        toast("Login Successfully");
-         navigate("/navers")
-     }else{
-         toast("Invalid credentials");
-      
-     }   
+  } 
+  else if (role === "Faculty") {
+    if (uname === "faculty" && pwd === "faculty") {
+      sessionStorage.setItem("username", uname);
+      sessionStorage.setItem("role", role);
+      alert("Login valid");
+      navigate("/navers");
+    } else {
+      toast.error("Invalid Credentials");
     }
-     else if(role=="Parent"){
-        if(uname=="parent" && pwd=="parent" )
-     {
-        sessionStorage.setItem("username", uname)
-        sessionStorage.setItem("role", role)
-        toast("Login Successfully");
-         navigate("/navs")
-     }else{
-         toast("Invalid Credentials");
-     }   
-     }
-      else{
-        if(uname=="admin" && pwd=="admin" )
-     {
-          sessionStorage.setItem("username", uname)
-          sessionStorage.setItem("role", role)
-       toast("Login Successfully");
-         navigate("/naver")
-     }else{
-          toast("Invalid Credentials");
-     }   
-     }
-} 
+  } 
+  else if (role === "Parent") {
+    if (uname === "parent" && pwd === "parent") {
+      sessionStorage.setItem("username", uname);
+      sessionStorage.setItem("role", role);
+      alert("Login valid");
+      navigate("/navs");
+    } else {
+      toast.error("Invalid Credentials");
+    }
+  } 
+  else if (role === "Admin") {
+    if (uname === "admin" && pwd === "admin") {
+      sessionStorage.setItem("username", uname);
+      sessionStorage.setItem("role", role);
+      alert("Login valid");
+      navigate("/naver");
+    } else {
+      toast.error("Invalid Credentials");
+    }
+  }
+};
   return (
     <div className="mainContainer">
       <div className="image">
@@ -116,7 +113,7 @@ const handleSubmit=()=>{
     /></div>
 
           <button className="loginBtn" type="button"  onClick={handleSubmit}>Login</button>
-             <ToastContainer autoClose={5000} />
+            <ToastContainer position="top-center" autoClose={3000} />
         </div>
       </div>
 
