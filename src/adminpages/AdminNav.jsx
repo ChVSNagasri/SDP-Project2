@@ -22,7 +22,7 @@ export default function AdminNav()
 
     setTimeout(() => {
       navigate("/")
-    }, 2000)
+    }, 5000)
   };
 
   return (
