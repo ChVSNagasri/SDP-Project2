@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Route, Routes, useNavigate, Link } from 'react-router-dom'
-import { Typography } from '@mui/material'   // ✅ MUI added
+import { Typography } from '@mui/material'
 
 import FacultyHome from './FacultyHome'
 import FacultyTimetable from './FacultyTimetable'
@@ -12,14 +12,14 @@ import Notfound from '../Notfound'
 export default function FacultyNav() 
 {
   const navigate = useNavigate()
-  const [showMsg, setShowMsg] = useState(false)   // ✅ state added
+  const [showMsg, setShowMsg] = useState(false)
 
   const handleLogout = () => {
-    setShowMsg(true)   // show Typography
+    setShowMsg(true)
 
     setTimeout(() => {
       navigate("/")
-    }, 5000)
+    }, 9000)
   }
 
   return (
@@ -34,10 +34,23 @@ export default function FacultyNav()
       </nav>
 
       <div className="content">
+
         {showMsg && (
-          <Typography variant="h6" color="error" style={{ marginBottom: '10px' }}>
-            You have been logged out successfully!
-          </Typography>
+          <div style={{
+            width: "320px",
+            margin: "20px auto",
+            padding: "15px",
+            backgroundColor: "#ffe6e6",
+            border: "2px solid #ff4d4d",
+            borderRadius: "10px",
+            textAlign: "center",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+            animation: "fadeIn 0.5s ease-in-out"
+          }}>
+            <Typography variant="h6" style={{ color: "#cc0000", fontWeight: "bold" }}>
+              You have been logged out!
+            </Typography>
+          </div>
         )}
 
         <Routes>
@@ -49,6 +62,22 @@ export default function FacultyNav()
         </Routes>
 
       </div>
+
+      <style>
+        {`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}
+      </style>
+
     </div>
   )
 }
