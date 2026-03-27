@@ -20,7 +20,7 @@ export default function ParentNav()
 
     setTimeout(() => {
       navigate("/")
-    }, 6000)
+    }, 3000)
   }
 
   return (

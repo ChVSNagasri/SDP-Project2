@@ -19,7 +19,7 @@ export default function FacultyNav()
 
     setTimeout(() => {
       navigate("/")
-    }, 9000)
+    }, 3000)
   }
 
   return (
@@ -41,13 +41,13 @@ export default function FacultyNav()
             margin: "20px auto",
             padding: "15px",
             backgroundColor: "#ffe6e6",
-            border: "2px solid #ff4d4d",
+            border: "2px solid #36d924",
             borderRadius: "10px",
             textAlign: "center",
             boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
             animation: "fadeIn 0.5s ease-in-out"
           }}>
-            <Typography variant="h6" style={{ color: "#cc0000", fontWeight: "bold" }}>
+            <Typography variant="h6" style={{ color: "#3f6b51", fontWeight: "bold" }}>
               You have been logged out!
             </Typography>
           </div>
