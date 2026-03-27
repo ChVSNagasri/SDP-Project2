@@ -48,7 +48,7 @@ export default function FacultyNav()
             animation: "fadeIn 0.5s ease-in-out"
           }}>
             <Typography variant="h6" style={{ color: "#092389", fontWeight: "bold" }}>
-              You have been logged out!
+             Logged out successfully!
             </Typography>
           </div>
         )}
