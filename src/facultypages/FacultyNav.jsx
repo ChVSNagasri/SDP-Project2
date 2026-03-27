@@ -40,7 +40,7 @@ export default function FacultyNav()
             width: "320px",
             margin: "20px auto",
             padding: "15px",
-            backgroundColor: "#ffe6e6",
+            backgroundColor: "#b3eea5",
             border: "2px solid #36d924",
             borderRadius: "10px",
             textAlign: "center",
