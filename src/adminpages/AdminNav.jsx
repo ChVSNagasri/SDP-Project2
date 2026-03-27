@@ -37,22 +37,22 @@ export default function AdminNav()
       </nav>
 
       {showMsg && (
-        <div style={{
-          width: "320px",
-          margin: "20px auto",
-          padding: "15px",
-          backgroundColor: "#e6f7ff",
-          border: "2px solid #1890ff",
-          borderRadius: "10px",
-          textAlign: "center",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-          animation: "fadeIn 0.5s ease-in-out"
-        }}>
-          <Typography variant="h6" style={{ color: "#0050b3", fontWeight: "bold" }}>
-            Admin logged out successfully!
-          </Typography>
-        </div>
-      )}
+              <div style={{
+                width: "320px",
+                margin: "20px auto",
+                padding: "15px",
+                backgroundColor: "#ffe6e6",
+                border: "2px solid #ff4d4d",
+                borderRadius: "10px",
+                textAlign: "center",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+                animation: "fadeIn 0.5s ease-in-out"
+              }}>
+                <Typography variant="h6" style={{ color: "#cc0000", fontWeight: "bold" }}>
+                  You have been logged out!
+                </Typography>
+              </div>
+            )}
 
       <Routes>
         <Route index element={<AdminHome/>}/>
