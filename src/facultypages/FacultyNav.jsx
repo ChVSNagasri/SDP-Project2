@@ -40,14 +40,14 @@ export default function FacultyNav()
             width: "320px",
             margin: "20px auto",
             padding: "15px",
-            backgroundColor: "#b3eea5",
-            border: "2px solid #36d924",
+            backgroundColor: "#cad4fc",
+            border: "2px solid #5b7cfa",
             borderRadius: "10px",
             textAlign: "center",
             boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
             animation: "fadeIn 0.5s ease-in-out"
           }}>
-            <Typography variant="h6" style={{ color: "#3f6b51", fontWeight: "bold" }}>
+            <Typography variant="h6" style={{ color: "#092389", fontWeight: "bold" }}>
               You have been logged out!
             </Typography>
           </div>
