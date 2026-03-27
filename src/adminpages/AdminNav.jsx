@@ -45,7 +45,7 @@ export default function AdminNav()
           zIndex: 1000,
           animation: "fadeIn 0.5s ease-in-out"
         }}>
-          <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
+          <Typography variant="h6" style={{ color: "#092389", fontWeight: "bold" }}>
             Logged out successfully!
           </Typography>
         </div>
