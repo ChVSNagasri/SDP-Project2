@@ -23,12 +23,35 @@ export default function StudentNav()
 
     setTimeout(() => {
       navigate("/")
-    }, 6000)
+    }, 3000) 
   }
 
   return (
     <div className="main-container">
 
+      {showMsg && (
+        <div style={{
+          position: "fixed",
+          top: "10px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "320px",
+          padding: "15px",
+          backgroundColor: "#e6ffe6",
+          border: "2px solid #33cc33",
+          borderRadius: "10px",
+          textAlign: "center",
+          boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+          zIndex: 1000,
+          animation: "fadeIn 0.5s ease-in-out"
+        }}>
+          <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
+            Logged out successfully!
+          </Typography>
+        </div>
+      )}
+
+   
       <nav className="nav">
         <button><Link to="/nav">🏠Home</Link></button>
         <button><Link to="/nav/profile">👤Profile</Link></button>
@@ -40,25 +63,6 @@ export default function StudentNav()
         <button><Link to="/nav/timetable">📅Timetable</Link></button>
         <button onClick={handleLogout}>🔒Logout</button>
       </nav>
-
-      
-            {showMsg && (
-              <div style={{
-                width: "320px",
-                margin: "20px auto",
-                padding: "15px",
-                backgroundColor: "#e6ffe6",
-                border: "2px solid #33cc33",
-                borderRadius: "10px",
-                textAlign: "center",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-                animation: "fadeIn 0.5s ease-in-out"
-              }}>
-                <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
-                  Logged out successfully!
-                </Typography>
-              </div>
-            )}
 
       <div className="content">
         <Routes>
