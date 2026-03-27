@@ -36,20 +36,21 @@ export default function AdminNav()
         <button onClick={handleLogout}>🔒Logout</button>
       </nav>
 
-      {showMsg && (
+      
+            {showMsg && (
               <div style={{
                 width: "320px",
                 margin: "20px auto",
                 padding: "15px",
-                backgroundColor: "#ffe6e6",
-                border: "2px solid #ff4d4d",
+                backgroundColor: "#e6ffe6",
+                border: "2px solid #33cc33",
                 borderRadius: "10px",
                 textAlign: "center",
                 boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
                 animation: "fadeIn 0.5s ease-in-out"
               }}>
-                <Typography variant="h6" style={{ color: "#cc0000", fontWeight: "bold" }}>
-                  You have been logged out!
+                <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
+                  Logged out successfully!
                 </Typography>
               </div>
             )}

@@ -41,23 +41,24 @@ export default function StudentNav()
         <button onClick={handleLogout}>🔒Logout</button>
       </nav>
 
-      {showMsg && (
-        <div style={{
-          width: "320px",
-          margin: "20px auto",
-          padding: "15px",
-          backgroundColor: "#fff3e6",
-          border: "2px solid #ff9933",
-          borderRadius: "10px",
-          textAlign: "center",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-          animation: "fadeIn 0.5s ease-in-out"
-        }}>
-          <Typography variant="h6" style={{ color: "#cc6600", fontWeight: "bold" }}>
-            Student logged out successfully!
-          </Typography>
-        </div>
-      )}
+      
+            {showMsg && (
+              <div style={{
+                width: "320px",
+                margin: "20px auto",
+                padding: "15px",
+                backgroundColor: "#e6ffe6",
+                border: "2px solid #33cc33",
+                borderRadius: "10px",
+                textAlign: "center",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+                animation: "fadeIn 0.5s ease-in-out"
+              }}>
+                <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
+                  Logged out successfully!
+                </Typography>
+              </div>
+            )}
 
       <div className="content">
         <Routes>
