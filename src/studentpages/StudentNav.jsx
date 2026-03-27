@@ -37,15 +37,15 @@ export default function StudentNav()
           transform: "translateX(-50%)",
           width: "320px",
           padding: "15px",
-          backgroundColor: "#e6ffe6",
-          border: "2px solid #33cc33",
+          backgroundColor: "#cad4fc",
+          border: "2px solid #5b7cfa",
           borderRadius: "10px",
           textAlign: "center",
           boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
           zIndex: 1000,
           animation: "fadeIn 0.5s ease-in-out"
         }}>
-          <Typography variant="h6" style={{ color: "#006600", fontWeight: "bold" }}>
+          <Typography variant="h6" style={{ color: "#092389", fontWeight: "bold" }}>
             Logged out successfully!
           </Typography>
         </div>
