@@ -9,9 +9,10 @@ export default function Awarders() {
   const displayData = async () => {
     try {
 
-      const response = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://apidemo-netlify.vercel.app/api/users"
-      )
+     const response = await axios.get(
+  "https://api.allorigins.win/raw?url=https://apidemo-netlify.vercel.app/api/users"
+)
+    
 
       setData(response.data)
 
