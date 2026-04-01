@@ -9,7 +9,7 @@ export default function Awarders() {
   const displayData = async () => {
     try {
 
-      const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+      const response = await axios.get("https://apidemo-netlify.vercel.app/api/users")
 
       setData(response.data)
 
